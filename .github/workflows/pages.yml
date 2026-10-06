@@ -20,7 +20,8 @@ jobs:
         run: |
           node --check dist/app.mjs
           node --check dist/model.mjs
-          node --test tests/model.test.mjs
+          node --check dist/touch-drag.mjs
+          node --test tests/*.test.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
